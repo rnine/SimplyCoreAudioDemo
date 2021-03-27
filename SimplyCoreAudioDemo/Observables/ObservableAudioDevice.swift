@@ -34,12 +34,12 @@ class ObservableAudioDevice: ObservableObject {
         didSet { device.setClockSourceID(clockSourceID) }
     }
 
-    @Published var isDefaultInputDevice: Bool = false
-    @Published var isDefaultOutputDevice: Bool = false
-    @Published var isDefaultSystemDevice: Bool = false
+    @Published var isDefaultInputDevice: Bool
+    @Published var isDefaultOutputDevice: Bool
+    @Published var isDefaultSystemOutputDevice: Bool
 
     var isDefaultDevice: Bool {
-        isDefaultInputDevice || isDefaultOutputDevice || isDefaultSystemDevice
+        isDefaultInputDevice || isDefaultOutputDevice || isDefaultSystemOutputDevice
     }
 
     private let device: AudioDevice
@@ -66,6 +66,10 @@ class ObservableAudioDevice: ObservableObject {
 
         nominalSampleRate = device.nominalSampleRate ?? 0
         clockSourceID = device.clockSourceID ?? 0
+
+        isDefaultInputDevice = device.isDefaultInputDevice
+        isDefaultOutputDevice = device.isDefaultOutputDevice
+        isDefaultSystemOutputDevice = device.isDefaultSystemOutputDevice
     }
 
     func clockSourceName(for id: UInt32) -> String {

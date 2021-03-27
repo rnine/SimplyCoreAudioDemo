@@ -60,7 +60,7 @@ private extension ObservableSCA {
     func updateDefaultSystemDevice() {
         if let defaultSystemDevice = simply.defaultSystemOutputDevice {
             for device in devices {
-                device.isDefaultSystemDevice = device.id == defaultSystemDevice.id
+                device.isDefaultSystemOutputDevice = device.id == defaultSystemDevice.id
             }
         }
     }

@@ -78,7 +78,7 @@ struct DeviceDetail: View {
                         .font(.subheadline).italic()
                 }
 
-                if device.isDefaultSystemDevice {
+                if device.isDefaultSystemOutputDevice {
                     Text("(*) This is the default system device.")
                         .font(.subheadline).italic()
                 }

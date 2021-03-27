@@ -1,6 +1,6 @@
 # 🔊 SimplyCoreAudio Demo
 
-[SimplyCoreAudio](https://github.com/rnine/SimplyCoreAudio) demo project.
+[SimplyCoreAudio](https://github.com/rnine/SimplyCoreAudio) demo project showcasing device enumeration and notifications using [SwiftUI](https://developer.apple.com/xcode/swiftui/).
 
 ## Requirements
 

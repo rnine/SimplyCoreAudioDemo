@@ -17,5 +17,8 @@ struct SimplyCoreAudioDemoApp: App {
                 .frame(minWidth: 650, idealWidth: 650, minHeight: 300, idealHeight: 300)
                 .environmentObject(sca)
         }
+        .commands {
+            SidebarCommands()
+        }
     }
 }

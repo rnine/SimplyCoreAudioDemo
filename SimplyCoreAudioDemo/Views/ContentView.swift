@@ -21,14 +21,15 @@ struct ContentView: View {
                                    selection: $selectedDevice) {
                         DeviceRow(device: device)
                     }
+                    .accentColor(.orange)
                 }
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(SidebarListStyle())
             .frame(minWidth: 250, idealWidth: 250)
             .navigationTitle("Devices")
-            .focusable()
-        }.onAppear {
+        }
+        .onAppear {
             selectedDevice = sca.devices.first
         }
     }

@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		458775D3260F493200816EF0 /* AudioDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */; };
+		458775D7260F797D00816EF0 /* DeviceSubheader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458775D6260F797D00816EF0 /* DeviceSubheader.swift */; };
+		45DDF6C6260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */; };
+		45DDF6CA260F3B5A00C5D8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDF6C9260F3B5A00C5D8E9 /* Assets.xcassets */; };
+		45DDF6CD260F3B5A00C5D8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDF6CC260F3B5A00C5D8E9 /* Preview Assets.xcassets */; };
+		45DDF6D9260F3BBD00C5D8E9 /* SimplyCoreAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 45DDF6D8260F3BBD00C5D8E9 /* SimplyCoreAudio */; };
+		45DDF6DC260F3C2B00C5D8E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDF6C7260F3B5900C5D8E9 /* ContentView.swift */; };
+		45DDF6E3260F3FA200C5D8E9 /* DeviceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDF6E2260F3FA200C5D8E9 /* DeviceRow.swift */; };
+		45DDF6E8260F40AE00C5D8E9 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDF6E7260F40AE00C5D8E9 /* DeviceDetail.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioDevice+Extensions.swift"; sourceTree = "<group>"; };
+		458775D6260F797D00816EF0 /* DeviceSubheader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSubheader.swift; sourceTree = "<group>"; };
+		45DDF6C2260F3B5900C5D8E9 /* SimplyCoreAudioDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyCoreAudioDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyCoreAudioDemoApp.swift; sourceTree = "<group>"; };
+		45DDF6C7260F3B5900C5D8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		45DDF6C9260F3B5A00C5D8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45DDF6CC260F3B5A00C5D8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		45DDF6CE260F3B5A00C5D8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45DDF6CF260F3B5A00C5D8E9 /* SimplyCoreAudioDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplyCoreAudioDemo.entitlements; sourceTree = "<group>"; };
+		45DDF6E2260F3FA200C5D8E9 /* DeviceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRow.swift; sourceTree = "<group>"; };
+		45DDF6E7260F40AE00C5D8E9 /* DeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetail.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45DDF6BF260F3B5900C5D8E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DDF6D9260F3BBD00C5D8E9 /* SimplyCoreAudio in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		458775D1260F492200816EF0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45DDF6B9260F3B5900C5D8E9 = {
+			isa = PBXGroup;
+			children = (
+				45DDF6C4260F3B5900C5D8E9 /* SimplyCoreAudioDemo */,
+				45DDF6C3260F3B5900C5D8E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45DDF6C3260F3B5900C5D8E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45DDF6C2260F3B5900C5D8E9 /* SimplyCoreAudioDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45DDF6C4260F3B5900C5D8E9 /* SimplyCoreAudioDemo */ = {
+			isa = PBXGroup;
+			children = (
+				458775D1260F492200816EF0 /* Extensions */,
+				45DDF6E5260F405200C5D8E9 /* Views */,
+				45DDF6CF260F3B5A00C5D8E9 /* SimplyCoreAudioDemo.entitlements */,
+				45DDF6CE260F3B5A00C5D8E9 /* Info.plist */,
+				45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */,
+				45DDF6C9260F3B5A00C5D8E9 /* Assets.xcassets */,
+				45DDF6CB260F3B5A00C5D8E9 /* Preview Content */,
+			);
+			path = SimplyCoreAudioDemo;
+			sourceTree = "<group>";
+		};
+		45DDF6CB260F3B5A00C5D8E9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				45DDF6CC260F3B5A00C5D8E9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		45DDF6E5260F405200C5D8E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45DDF6C7260F3B5900C5D8E9 /* ContentView.swift */,
+				45DDF6E2260F3FA200C5D8E9 /* DeviceRow.swift */,
+				45DDF6E7260F40AE00C5D8E9 /* DeviceDetail.swift */,
+				458775D6260F797D00816EF0 /* DeviceSubheader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45DDF6C1260F3B5900C5D8E9 /* SimplyCoreAudioDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45DDF6D2260F3B5A00C5D8E9 /* Build configuration list for PBXNativeTarget "SimplyCoreAudioDemo" */;
+			buildPhases = (
+				45DDF6BE260F3B5900C5D8E9 /* Sources */,
+				45DDF6BF260F3B5900C5D8E9 /* Frameworks */,
+				45DDF6C0260F3B5900C5D8E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplyCoreAudioDemo;
+			packageProductDependencies = (
+				45DDF6D8260F3BBD00C5D8E9 /* SimplyCoreAudio */,
+			);
+			productName = SimplyCoreAudioDemo;
+			productReference = 45DDF6C2260F3B5900C5D8E9 /* SimplyCoreAudioDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45DDF6BA260F3B5900C5D8E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					45DDF6C1260F3B5900C5D8E9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 45DDF6BD260F3B5900C5D8E9 /* Build configuration list for PBXProject "SimplyCoreAudioDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45DDF6B9260F3B5900C5D8E9;
+			packageReferences = (
+				45DDF6D7260F3BBD00C5D8E9 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */,
+			);
+			productRefGroup = 45DDF6C3260F3B5900C5D8E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45DDF6C1260F3B5900C5D8E9 /* SimplyCoreAudioDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45DDF6C0260F3B5900C5D8E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DDF6CD260F3B5A00C5D8E9 /* Preview Assets.xcassets in Resources */,
+				45DDF6CA260F3B5A00C5D8E9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45DDF6BE260F3B5900C5D8E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DDF6E8260F40AE00C5D8E9 /* DeviceDetail.swift in Sources */,
+				458775D7260F797D00816EF0 /* DeviceSubheader.swift in Sources */,
+				45DDF6DC260F3C2B00C5D8E9 /* ContentView.swift in Sources */,
+				458775D3260F493200816EF0 /* AudioDevice+Extensions.swift in Sources */,
+				45DDF6E3260F3FA200C5D8E9 /* DeviceRow.swift in Sources */,
+				45DDF6C6260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		45DDF6D0260F3B5A00C5D8E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45DDF6D1260F3B5A00C5D8E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		45DDF6D3260F3B5A00C5D8E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimplyCoreAudioDemo/SimplyCoreAudioDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"SimplyCoreAudioDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = ZBJR46PSPF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimplyCoreAudioDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.9labs.SimplyCoreAudioDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		45DDF6D4260F3B5A00C5D8E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimplyCoreAudioDemo/SimplyCoreAudioDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"SimplyCoreAudioDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = ZBJR46PSPF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SimplyCoreAudioDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.9labs.SimplyCoreAudioDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45DDF6BD260F3B5900C5D8E9 /* Build configuration list for PBXProject "SimplyCoreAudioDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DDF6D0260F3B5A00C5D8E9 /* Debug */,
+				45DDF6D1260F3B5A00C5D8E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45DDF6D2260F3B5A00C5D8E9 /* Build configuration list for PBXNativeTarget "SimplyCoreAudioDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DDF6D3260F3B5A00C5D8E9 /* Debug */,
+				45DDF6D4260F3B5A00C5D8E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45DDF6D7260F3BBD00C5D8E9 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rnine/SimplyCoreAudio.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45DDF6D8260F3BBD00C5D8E9 /* SimplyCoreAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45DDF6D7260F3BBD00C5D8E9 /* XCRemoteSwiftPackageReference "SimplyCoreAudio" */;
+			productName = SimplyCoreAudio;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 45DDF6BA260F3B5900C5D8E9 /* Project object */;
+}

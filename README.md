@@ -1,4 +1,4 @@
-# SimplyCoreAudio Demo
+# 🔊 SimplyCoreAudio Demo
 
 [SimplyCoreAudio](https://github.com/rnine/SimplyCoreAudio) demo project.
 

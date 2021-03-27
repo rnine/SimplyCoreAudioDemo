@@ -79,7 +79,7 @@ struct DeviceDetail: View {
                 }
 
                 if device.isDefaultSystemOutputDevice {
-                    Text("(*) This is the default system device.")
+                    Text("(*) This is the default system output device.")
                         .font(.subheadline).italic()
                 }
             }

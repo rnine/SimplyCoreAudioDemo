@@ -6,18 +6,16 @@
 //
 
 import SwiftUI
-import SimplyCoreAudio
-
-extension SimplyCoreAudio: ObservableObject {}
 
 @main
 struct SimplyCoreAudioDemoApp: App {
-    @StateObject private var simply = SimplyCoreAudio()
+    @StateObject private var sca = ObservableSCA()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(simply)
+                .frame(minWidth: 650, idealWidth: 650, minHeight: 300, idealHeight: 300)
+                .environmentObject(sca)
         }
     }
 }

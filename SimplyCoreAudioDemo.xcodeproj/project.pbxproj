@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		458775D3260F493200816EF0 /* AudioDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */; };
+		458775D3260F493200816EF0 /* ObservableAudioDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458775D2260F493200816EF0 /* ObservableAudioDevice+Extensions.swift */; };
 		458775D7260F797D00816EF0 /* DeviceSubheader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458775D6260F797D00816EF0 /* DeviceSubheader.swift */; };
+		45A526C4260FB30000E57B19 /* ObservableSCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A526C3260FB30000E57B19 /* ObservableSCA.swift */; };
+		45A526C7260FB32D00E57B19 /* ObservableAudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A526C6260FB32D00E57B19 /* ObservableAudioDevice.swift */; };
+		45A526CA260FCB6900E57B19 /* Float64+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A526C9260FCB6900E57B19 /* Float64+Extensions.swift */; };
 		45DDF6C6260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */; };
 		45DDF6CA260F3B5A00C5D8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDF6C9260F3B5A00C5D8E9 /* Assets.xcassets */; };
 		45DDF6CD260F3B5A00C5D8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDF6CC260F3B5A00C5D8E9 /* Preview Assets.xcassets */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioDevice+Extensions.swift"; sourceTree = "<group>"; };
+		458775D2260F493200816EF0 /* ObservableAudioDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableAudioDevice+Extensions.swift"; sourceTree = "<group>"; };
 		458775D6260F797D00816EF0 /* DeviceSubheader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSubheader.swift; sourceTree = "<group>"; };
+		45A526C3260FB30000E57B19 /* ObservableSCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableSCA.swift; sourceTree = "<group>"; };
+		45A526C6260FB32D00E57B19 /* ObservableAudioDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableAudioDevice.swift; sourceTree = "<group>"; };
+		45A526C9260FCB6900E57B19 /* Float64+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float64+Extensions.swift"; sourceTree = "<group>"; };
 		45DDF6C2260F3B5900C5D8E9 /* SimplyCoreAudioDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplyCoreAudioDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplyCoreAudioDemoApp.swift; sourceTree = "<group>"; };
 		45DDF6C7260F3B5900C5D8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,9 +53,19 @@
 		458775D1260F492200816EF0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				458775D2260F493200816EF0 /* AudioDevice+Extensions.swift */,
+				45A526C9260FCB6900E57B19 /* Float64+Extensions.swift */,
+				458775D2260F493200816EF0 /* ObservableAudioDevice+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45A526C2260FB2F300E57B19 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				45A526C6260FB32D00E57B19 /* ObservableAudioDevice.swift */,
+				45A526C3260FB30000E57B19 /* ObservableSCA.swift */,
+			);
+			path = Observables;
 			sourceTree = "<group>";
 		};
 		45DDF6B9260F3B5900C5D8E9 = {
@@ -71,13 +87,14 @@
 		45DDF6C4260F3B5900C5D8E9 /* SimplyCoreAudioDemo */ = {
 			isa = PBXGroup;
 			children = (
-				458775D1260F492200816EF0 /* Extensions */,
-				45DDF6E5260F405200C5D8E9 /* Views */,
 				45DDF6CF260F3B5A00C5D8E9 /* SimplyCoreAudioDemo.entitlements */,
 				45DDF6CE260F3B5A00C5D8E9 /* Info.plist */,
 				45DDF6C5260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift */,
 				45DDF6C9260F3B5A00C5D8E9 /* Assets.xcassets */,
+				458775D1260F492200816EF0 /* Extensions */,
+				45A526C2260FB2F300E57B19 /* Observables */,
 				45DDF6CB260F3B5A00C5D8E9 /* Preview Content */,
+				45DDF6E5260F405200C5D8E9 /* Views */,
 			);
 			path = SimplyCoreAudioDemo;
 			sourceTree = "<group>";
@@ -177,9 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45DDF6E8260F40AE00C5D8E9 /* DeviceDetail.swift in Sources */,
+				45A526CA260FCB6900E57B19 /* Float64+Extensions.swift in Sources */,
 				458775D7260F797D00816EF0 /* DeviceSubheader.swift in Sources */,
 				45DDF6DC260F3C2B00C5D8E9 /* ContentView.swift in Sources */,
-				458775D3260F493200816EF0 /* AudioDevice+Extensions.swift in Sources */,
+				458775D3260F493200816EF0 /* ObservableAudioDevice+Extensions.swift in Sources */,
+				45A526C4260FB30000E57B19 /* ObservableSCA.swift in Sources */,
+				45A526C7260FB32D00E57B19 /* ObservableAudioDevice.swift in Sources */,
 				45DDF6E3260F3FA200C5D8E9 /* DeviceRow.swift in Sources */,
 				45DDF6C6260F3B5900C5D8E9 /* SimplyCoreAudioDemoApp.swift in Sources */,
 			);

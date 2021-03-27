@@ -9,7 +9,7 @@ import SwiftUI
 import SimplyCoreAudio
 
 struct DeviceSubheader: View {
-    var device: AudioDevice
+    var device: ObservableAudioDevice
 
     var body: some View {
         HStack(alignment: .center, spacing: 3) {
@@ -27,7 +27,9 @@ struct DeviceSubheader: View {
 }
 
 struct DeviceSubheader_Previews: PreviewProvider {
+    static let defaultDevice = ObservableAudioDevice(device: SimplyCoreAudio().defaultOutputDevice!)
+
     static var previews: some View {
-        DeviceSubheader(device: SimplyCoreAudio().defaultOutputDevice!)
+        DeviceSubheader(device: defaultDevice)
     }
 }

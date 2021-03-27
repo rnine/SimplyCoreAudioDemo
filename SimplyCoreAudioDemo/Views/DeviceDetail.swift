@@ -9,8 +9,7 @@ import SwiftUI
 import SimplyCoreAudio
 
 struct DeviceDetail: View {
-    @EnvironmentObject var simply: SimplyCoreAudio
-    var device: AudioDevice
+    @ObservedObject var device: ObservableAudioDevice
 
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
@@ -22,22 +21,68 @@ struct DeviceDetail: View {
 
             Divider()
 
-            Label("Manufacturer: \(device.prettyManufacturer)", systemImage: "seal")
-                .font(.body)
+            HStack(alignment: .top, spacing: 11) {
+                Text("Manufacturer:")
+                    .frame(minWidth: 100, alignment: .trailing)
+                Text(device.manufacturer)
+                    .bold()
+            }
 
-            Label("UID: \(device.prettyUID)", systemImage: "seal")
-                .font(.body)
+            HStack(alignment: .top, spacing: 11) {
+                Text("UID:")
+                    .frame(minWidth: 100, alignment: .trailing)
+                Text(device.uid)
+                    .bold()
+            }
 
-            Label("Model UID: \(device.prettyModelUID)", systemImage: "seal")
-                .font(.body)
+            HStack(alignment: .top, spacing: 11) {
+                Text("Model UID:")
+                    .frame(minWidth: 100, alignment: .trailing)
+                Text(device.modelUID)
+                    .bold()
+            }
 
             Divider()
 
-            Label("Clock Source: \(device.prettyClockSource)", systemImage: "seal")
-                .font(.body)
+            HStack(alignment: .center, spacing: 11) {
+                Picker("Clock Source:", selection: $device.clockSourceID, content: { // <2>
+                    if device.clockSourceIDs.isEmpty {
+                        Text(device.clockSourceName)
+                            .tag(device.clockSourceID)
+                    } else {
+                        ForEach(device.clockSourceIDs, id: \.self) { clockSourceID in
+                            Text(device.clockSourceName(for: clockSourceID))
+                        }
+                    }
+                })
+                .disabled(device.clockSourceIDs.count <= 1)
 
-            Label("Sample Rate: \(device.prettySampleRate)", systemImage: "seal")
-                .font(.body)
+                Picker("Sample Rate:", selection: $device.nominalSampleRate, content: { // <2>
+                    ForEach(device.nominalSampleRates, id: \.self) { samplerate in
+                        Text("\(samplerate.kiloHertzs)")
+                    }
+                })
+                .disabled(device.nominalSampleRates.count <= 1)
+            }
+
+            if device.isDefaultDevice {
+                Divider()
+
+                if device.isDefaultInputDevice {
+                    Text("(*) This is the default input device.")
+                        .font(.subheadline).italic()
+                }
+
+                if device.isDefaultOutputDevice {
+                    Text("(*) This is the default output device.")
+                        .font(.subheadline).italic()
+                }
+
+                if device.isDefaultSystemDevice {
+                    Text("(*) This is the default system device.")
+                        .font(.subheadline).italic()
+                }
+            }
         }.padding()
         .navigationTitle(device.name)
 
@@ -46,65 +91,9 @@ struct DeviceDetail: View {
 }
 
 struct DeviceDetail_Previews: PreviewProvider {
-    static let simply = SimplyCoreAudio()
+    static let defaultDevice = ObservableAudioDevice(device: SimplyCoreAudio().defaultOutputDevice!)
 
     static var previews: some View {
-        DeviceDetail(device: SimplyCoreAudio().defaultOutputDevice!)
-            .environmentObject(simply)
+        DeviceDetail(device: defaultDevice)
     }
 }
-
-//struct LandmarkDetail: View {
-//    @EnvironmentObject var modelData: ModelData
-//    var landmark: Landmark
-//
-//    var landmarkIndex: Int {
-//        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
-//    }
-//
-//    var body: some View {
-//        ScrollView {
-//            MapView(coordinate: landmark.locationCoordinate)
-//                .ignoresSafeArea(edges: .top)
-//                .frame(height: 300)
-//
-//            CircleImage(image: landmark.image)
-//                .offset(y: -130)
-//                .padding(.bottom, -130)
-//
-//            VStack(alignment: .leading) {
-//                HStack {
-//                    Text(landmark.name)
-//                        .font(.title)
-//                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
-//                }
-//
-//                HStack {
-//                    Text(landmark.park)
-//                    Spacer()
-//                    Text(landmark.state)
-//                }
-//                .font(.subheadline)
-//                .foregroundColor(.secondary)
-//
-//                Divider()
-//
-//                Text("About \(landmark.name)")
-//                    .font(.title2)
-//                Text(landmark.description)
-//            }
-//            .padding()
-//        }
-//        .navigationTitle(landmark.name)
-//        .navigationBarTitleDisplayMode(.inline)
-//    }
-//}
-//
-//struct LandmarkDetail_Previews: PreviewProvider {
-//    static let modelData = ModelData()
-//
-//    static var previews: some View {
-//        LandmarkDetail(landmark: modelData.landmarks[0])
-//            .environmentObject(modelData)
-//    }
-//}

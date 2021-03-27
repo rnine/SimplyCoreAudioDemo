@@ -9,13 +9,13 @@ import SwiftUI
 import SimplyCoreAudio
 
 struct ContentView: View {
-    @EnvironmentObject var simply: SimplyCoreAudio
-    @State var selectedDevice: AudioDevice?
+    @EnvironmentObject var sca: ObservableSCA
+    @State var selectedDevice: ObservableAudioDevice?
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(simply.allDevices, id: \.self) { device in
+                ForEach(sca.devices, id: \.self) { device in
                     NavigationLink(destination: DeviceDetail(device: device),
                                    tag: device,
                                    selection: $selectedDevice) {
@@ -25,10 +25,11 @@ struct ContentView: View {
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(SidebarListStyle())
+            .frame(minWidth: 250, idealWidth: 250)
             .navigationTitle("Devices")
             .focusable()
         }.onAppear {
-            selectedDevice = simply.allDevices.first
+            selectedDevice = sca.devices.first
         }
     }
 }
@@ -36,6 +37,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(SimplyCoreAudio())
+            .environmentObject(ObservableSCA())
     }
 }

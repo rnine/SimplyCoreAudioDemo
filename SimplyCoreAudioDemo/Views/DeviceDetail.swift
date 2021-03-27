@@ -13,9 +13,17 @@ struct DeviceDetail: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
-            Label(device.name, systemImage: device.systemImageName)
-                .font(.title)
-                .frame(minHeight: 40)
+            Label(
+                title: {
+                    Text(device.name)
+                },
+                icon: {
+                    Image(systemName: device.systemImageName)
+                        .foregroundColor(.orange)
+                }
+            )
+            .font(.title)
+            .frame(minHeight: 40)
 
             DeviceSubheader(device: device)
 

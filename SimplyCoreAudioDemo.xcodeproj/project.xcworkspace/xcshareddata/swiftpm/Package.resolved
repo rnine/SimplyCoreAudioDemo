@@ -5,9 +5,9 @@
         "package": "SimplyCoreAudio",
         "repositoryURL": "https://github.com/rnine/SimplyCoreAudio.git",
         "state": {
-          "branch": "develop",
-          "revision": "df87c7a390085bebf5d71b83ae26263c08d1078c",
-          "version": null
+          "branch": null,
+          "revision": "e049672b919127f0dda41503699983d2c905cd83",
+          "version": "4.0.1"
         }
       },
       {

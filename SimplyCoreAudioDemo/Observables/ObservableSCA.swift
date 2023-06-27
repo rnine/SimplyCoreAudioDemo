@@ -12,9 +12,7 @@ class ObservableSCA: ObservableObject {
     @Published var devices = [ObservableAudioDevice]()
 
     private var deviceForDevice = [AudioDevice : ObservableAudioDevice]() {
-        didSet {
-            devices = [ObservableAudioDevice](deviceForDevice.values.sorted(by: <))
-        }
+        didSet { devices = deviceForDevice.values.sorted(by: <) }
     }
 
     private let simply = SimplyCoreAudio()

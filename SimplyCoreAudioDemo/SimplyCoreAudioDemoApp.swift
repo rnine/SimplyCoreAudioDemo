@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct SimplyCoreAudioDemoApp: App {
-    @StateObject private var sca = ObservableSCA()
+    private let sca = ObservableSCA()
 
     var body: some Scene {
         WindowGroup {

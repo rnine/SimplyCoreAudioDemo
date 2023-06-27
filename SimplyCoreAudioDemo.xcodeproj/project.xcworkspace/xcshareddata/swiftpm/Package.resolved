@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rnine/SimplyCoreAudio.git",
       "state" : {
-        "revision" : "73014324f2a916b445b4da5a4232aa57033267af",
-        "version" : "4.1.0"
+        "branch" : "audio-hardware-ts",
+        "revision" : "fc153da4ac739f70696aa1a4d7892789fbf620ad"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",
       "state" : {
-        "revision" : "919eb1d83e02121cdb434c7bfc1f0c66ef17febe",
-        "version" : "1.0.2"
+        "revision" : "6c89474e62719ddcc1e9614989fff2f68208fe10",
+        "version" : "1.1.0"
       }
     }
   ],

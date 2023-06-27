@@ -53,7 +53,7 @@ struct DeviceDetail: View {
             Divider()
 
             HStack(alignment: .center, spacing: 11) {
-                Picker("Clock Source:", selection: $device.clockSourceID, content: { // <2>
+                Picker("Clock Source:", selection: $device.clockSourceID) {
                     if device.clockSourceIDs.isEmpty {
                         Text(device.clockSourceName)
                             .tag(device.clockSourceID)
@@ -62,14 +62,14 @@ struct DeviceDetail: View {
                             Text(device.clockSourceName(for: clockSourceID))
                         }
                     }
-                })
+                }
                 .disabled(device.clockSourceIDs.count <= 1)
 
-                Picker("Sample Rate:", selection: $device.nominalSampleRate, content: { // <2>
+                Picker("Sample Rate:", selection: $device.nominalSampleRate) {
                     ForEach(device.nominalSampleRates, id: \.self) { samplerate in
                         Text("\(samplerate.kiloHertzs)")
                     }
-                })
+                }
                 .disabled(device.nominalSampleRates.count <= 1)
             }
 
@@ -91,7 +91,8 @@ struct DeviceDetail: View {
                         .font(.subheadline).italic()
                 }
             }
-        }.padding()
+        }
+        .padding()
         .navigationTitle(device.name)
 
         Spacer()

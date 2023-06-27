@@ -9,8 +9,8 @@ import SwiftUI
 import SimplyCoreAudio
 
 struct ContentView: View {
-    @EnvironmentObject var sca: ObservableSCA
-    @State var selectedDevice: ObservableAudioDevice?
+    @EnvironmentObject private var sca: ObservableSCA
+    @State private var selectedDevice: ObservableAudioDevice?
 
     var body: some View {
         NavigationView {

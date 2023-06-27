@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(sca.devices, id: \.self) { device in
+                ForEach(sca.devices) { device in
                     NavigationLink(destination: DeviceDetail(device: device),
                                    tag: device,
                                    selection: $selectedDevice) {

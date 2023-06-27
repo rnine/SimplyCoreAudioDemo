@@ -9,7 +9,7 @@ import Foundation
 import SimplyCoreAudio
 import CoreAudio
 
-class ObservableAudioDevice: ObservableObject {
+class ObservableAudioDevice: ObservableObject, Identifiable {
     @Published var id: AudioObjectID
     @Published var name: String
     @Published var transportType: TransportType?

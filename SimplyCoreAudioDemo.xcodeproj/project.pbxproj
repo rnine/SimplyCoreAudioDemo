@@ -408,7 +408,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rnine/SimplyCoreAudio.git";
 			requirement = {
-				branch = "audio-hardware-ts";
+				branch = "add-iokit-transport-types";
 				kind = branch;
 			};
 		};

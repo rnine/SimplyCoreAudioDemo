@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/rnine/SimplyCoreAudio.git",
       "state" : {
-        "branch" : "add-iokit-transport-types",
-        "revision" : "9e4fd679776823fcbee8d951383b423f0dee6e67"
+        "branch" : "develop",
+        "revision" : "d83dc523a904c64e80ca2b9dea800a6cdce61aaf"
       }
     },
     {
